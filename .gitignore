@@ -25,3 +25,6 @@ Thumbs.db
 
 # Cursor (local IDE settings)
 .cursor/
+
+# Backend has its own repo (github.com/brianmaseno/tzelcafebackend)
+backend/
