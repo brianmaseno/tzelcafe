@@ -1,14 +1,14 @@
-# Dependencies
-node_modules/
+# Dependencies (any folder)
+**/node_modules/
 
 # Build
-dist/
-dist-ssr/
+**/dist/
+**/dist-ssr/
 
 # Local env
-.env
-.env.*
-!.env.example
+**/.env
+**/.env.*
+!**/.env.example
 
 # Editor / OS
 .vscode/*
@@ -19,8 +19,8 @@ Thumbs.db
 *.log
 
 # Tooling cache
-*.tsbuildinfo
-.npm
+**/*.tsbuildinfo
+**/.npm
 
 # Cursor (local IDE settings)
 .cursor/

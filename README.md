@@ -1,30 +1,23 @@
-# TZEL CAFÉ
+# TZEL CAFÉ — Monorepo
 
-Premium coffeehouse and restaurant web experience built with Vue 3, Vite, Tailwind CSS, Pinia, and Vue Router.
+This repo contains:
 
-Design reference: [Eato Restaurant UI Kit](https://www.figma.com/design/WXsrRKACAO6Qis8S3AUiHL/Eato---Restaurant---Cafe-Website-Figma-UI-Kit-FREE--Community-?node-id=18130-1723)
+- `frontend/`: Vue 3 + Vite + Tailwind storefront
+- `backend/`: Laravel (Blade) API + Admin Dashboard
 
-## Quick start
+## Frontend
 
 ```bash
+cd frontend
 npm install
 npm run dev
 ```
 
-## Project structure
+## Backend
 
+```bash
+cd backend
+composer install
+php artisan serve
 ```
-src/
-├── assets/styles/       # Global Tailwind theme & base styles
-├── components/
-│   ├── cart/            # CartDrawer
-│   ├── home/            # HeroSection, future home sections
-│   ├── layout/          # AppNavbar, AppFooter
-│   ├── menu/            # MenuItemCard, CategoryFilter (next phase)
-│   └── ui/              # PrimaryButton, shared primitives
-├── constants/           # Brand tokens, nav links
-├── router/              # Route-level code splitting
-├── stores/              # Pinia (cart, session, orders)
-├── types/               # Shared TypeScript interfaces
-└── views/               # HomeView, MenuView, CheckoutView
-```
+
