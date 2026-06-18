@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 import { BRAND, NAV_LINKS, FOOTER_LINKS } from '@/constants/brand'
+import { CONTACT } from '@/constants/contact'
 import { apiFetch } from '@/api/client'
 import { useI18n } from '@/composables/useI18n'
 
@@ -71,7 +72,15 @@ async function subscribe() {
           <p v-if="status" class="mt-2 text-xs text-tzel-gold">{{ status }}</p>
           <p v-if="error" class="mt-2 text-xs text-red-300">{{ error }}</p>
           <p class="mt-6 text-sm text-tzel-muted">Mon – Sun: 7:00 AM – 10:00 PM</p>
-          <p class="mt-2 text-sm text-tzel-muted">hello@tzelcafe.co.ke</p>
+          <p class="mt-2 text-sm text-tzel-muted">
+            <a :href="`tel:${CONTACT.phoneTel}`" class="hover:text-tzel-gold">{{ CONTACT.phone }}</a>
+          </p>
+          <p class="mt-2 text-sm text-tzel-muted">
+            <a :href="`mailto:${CONTACT.email}`" class="hover:text-tzel-gold">{{ CONTACT.email }}</a>
+          </p>
+          <p class="mt-2 text-sm text-tzel-muted">
+            <a :href="CONTACT.website" target="_blank" rel="noopener noreferrer" class="hover:text-tzel-gold">{{ CONTACT.websiteDisplay }}</a>
+          </p>
         </div>
       </div>
 

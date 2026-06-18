@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { ref } from 'vue'
 import type { MenuItem } from '@/types'
 import { useCartStore } from '@/stores/cart'
 import { formatPrice } from '@/utils/format'
@@ -11,9 +12,14 @@ const props = defineProps<Props>()
 const cart = useCartStore()
 const fallbackImage =
   'https://images.unsplash.com/photo-1442512595331-e89e73853f31?auto=format&fit=crop&w=800&q=80'
+const imageSrc = ref(props.item.image || fallbackImage)
 
 function handleAdd() {
   cart.addItem(props.item)
+}
+
+function onImageError() {
+  imageSrc.value = fallbackImage
 }
 </script>
 
@@ -23,12 +29,13 @@ function handleAdd() {
   >
     <div class="relative aspect-[4/3] overflow-hidden">
       <img
-        :src="item.image || fallbackImage"
+        :src="imageSrc"
         :alt="item.name"
         class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
         loading="lazy"
         width="400"
         height="300"
+        @error="onImageError"
       />
       <div
         class="absolute inset-0 bg-gradient-to-t from-tzel-ink/80 via-transparent to-transparent opacity-60"

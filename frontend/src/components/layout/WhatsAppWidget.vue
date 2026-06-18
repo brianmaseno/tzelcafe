@@ -1,5 +1,7 @@
 <script setup lang="ts">
-const number = import.meta.env.VITE_WHATSAPP_NUMBER || '254724329739'
+import { CONTACT } from '@/constants/contact'
+
+const number = import.meta.env.VITE_WHATSAPP_NUMBER || CONTACT.whatsapp
 const message = encodeURIComponent('Hello TZEL CAFÉ — I would like to place an order.')
 const href = `https://wa.me/${number}?text=${message}`
 </script>

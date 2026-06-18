@@ -1,3 +1,5 @@
+import { SOCIAL_EMAILS } from '@/constants/contact'
+
 export interface SitePageSection {
   title: string
   body: string
@@ -44,7 +46,7 @@ export const SITE_PAGES: Record<string, SitePage> = {
     description: 'Join the TZEL CAFÉ team.',
     sections: [
       { title: 'Baristas & Kitchen', body: 'We hire passionate people who care about quality and guest experience.' },
-      { title: 'How to Apply', body: 'Email careers@tzelcafe.co.ke with your CV and the role you are interested in.' },
+      { title: 'How to Apply', body: `Email ${SOCIAL_EMAILS.careers} with your CV and the role you are interested in.` },
     ],
   },
   franchise: {
@@ -52,7 +54,7 @@ export const SITE_PAGES: Record<string, SitePage> = {
     description: 'Partner with Africa\'s most loved café brand.',
     sections: [
       { title: 'The TZEL Model', body: 'Premium quality, affordable excellence, digital convenience, and community impact.' },
-      { title: 'Enquiries', body: 'Contact franchise@tzelcafe.co.ke for partnership information and territory availability.' },
+      { title: 'Enquiries', body: `Contact ${SOCIAL_EMAILS.franchise} for partnership information and territory availability.` },
     ],
   },
   'gift-cards': {
@@ -69,7 +71,7 @@ export const SITE_PAGES: Record<string, SitePage> = {
     sections: [
       { title: 'Private Functions', body: 'Birthdays, engagements, team celebrations, and intimate gatherings.' },
       { title: 'Corporate Events', body: 'Meetings, conferences, and catered events with full menu support.' },
-      { title: 'Book', body: 'Email events@tzelcafe.co.ke with your date, guest count, and requirements.' },
+      { title: 'Book', body: `Email ${SOCIAL_EMAILS.events} with your date, guest count, and requirements.` },
     ],
   },
   faqs: {

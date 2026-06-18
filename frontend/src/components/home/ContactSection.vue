@@ -3,6 +3,7 @@ import { ref } from 'vue'
 import PrimaryButton from '@/components/ui/PrimaryButton.vue'
 import { apiFetch } from '@/api/client'
 import { PRIMARY_LOCATION } from '@/data/locations'
+import { CONTACT } from '@/constants/contact'
 
 const form = ref({
   name: '',
@@ -70,8 +71,11 @@ async function handleSubmit() {
               </li>
               <li class="flex items-center gap-3">
                 <span class="flex h-10 w-10 items-center justify-center rounded-full bg-tzel-ink/50 text-tzel-bronze">✉</span>
-                hello@tzelcafe.co.ke
+                <a :href="`mailto:${CONTACT.email}`" class="text-tzel-gold hover:underline">{{ CONTACT.email }}</a>
               </li>
+              <li class="flex items-center gap-3">
+                <span class="flex h-10 w-10 items-center justify-center rounded-full bg-tzel-ink/50 text-tzel-bronze">🌐</span>
+                <a :href="CONTACT.website" target="_blank" rel="noopener noreferrer" class="text-tzel-gold hover:underline">{{ CONTACT.websiteDisplay }}</a>
             </ul>
           </div>
 
