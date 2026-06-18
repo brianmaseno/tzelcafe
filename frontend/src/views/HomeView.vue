@@ -3,6 +3,7 @@ import HeroSection from '@/components/home/HeroSection.vue'
 import FeaturedSection from '@/components/home/FeaturedSection.vue'
 import AboutSection from '@/components/home/AboutSection.vue'
 import PromotionsBanner from '@/components/home/PromotionsBanner.vue'
+import MpesaPaymentSection from '@/components/home/MpesaPaymentSection.vue'
 import PrimaryButton from '@/components/ui/PrimaryButton.vue'
 </script>
 
@@ -36,5 +37,7 @@ import PrimaryButton from '@/components/ui/PrimaryButton.vue'
         </div>
       </div>
     </section>
+
+    <MpesaPaymentSection />
   </main>
 </template>

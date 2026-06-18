@@ -76,6 +76,7 @@ async function handleSubmit() {
               <li class="flex items-center gap-3">
                 <span class="flex h-10 w-10 items-center justify-center rounded-full bg-tzel-ink/50 text-tzel-bronze">🌐</span>
                 <a :href="CONTACT.website" target="_blank" rel="noopener noreferrer" class="text-tzel-gold hover:underline">{{ CONTACT.websiteDisplay }}</a>
+              </li>
             </ul>
           </div>
 

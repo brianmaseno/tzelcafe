@@ -3,7 +3,7 @@ export const CONTACT = {
   phone: '+254 142 958667',
   phoneTel: '+254142958667',
   whatsapp: '254142958667',
-  email: 'hello@tzelcafe.com',
+  email: 'tzelcafe@gmail.com',
   website: 'https://www.tzelcafe.com',
   websiteDisplay: 'www.tzelcafe.com',
 } as const
@@ -15,7 +15,7 @@ export const MPESA = {
 } as const
 
 export const SOCIAL_EMAILS = {
-  careers: 'careers@tzelcafe.com',
-  franchise: 'franchise@tzelcafe.com',
-  events: 'events@tzelcafe.com',
+  careers: 'tzelcafe@gmail.com',
+  franchise: 'tzelcafe@gmail.com',
+  events: 'tzelcafe@gmail.com',
 } as const
