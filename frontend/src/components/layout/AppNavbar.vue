@@ -17,7 +17,7 @@ function closeMobileMenu() {
 <template>
   <header class="fixed inset-x-0 top-0 z-50 border-b border-white/5 bg-tzel-ink/80 backdrop-blur-md">
     <nav
-      class="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8"
+      class="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6 lg:px-8"
       aria-label="Main navigation"
     >
       <RouterLink
@@ -29,9 +29,9 @@ function closeMobileMenu() {
         <img
           src="/logo.png"
           alt="TZEL CAFÉ logo"
-          class="h-10 w-10 rounded-full object-cover ring-1 ring-tzel-bronze/40 transition group-hover:ring-tzel-bronze sm:h-11 sm:w-11"
-          width="44"
-          height="44"
+          class="h-14 w-14 rounded-full object-cover ring-2 ring-tzel-bronze/40 transition group-hover:ring-tzel-bronze sm:h-16 sm:w-16"
+          width="64"
+          height="64"
           loading="eager"
         />
         <div class="hidden sm:block">

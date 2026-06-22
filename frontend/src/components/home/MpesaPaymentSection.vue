@@ -5,8 +5,20 @@ import { CONTACT, MPESA } from '@/constants/contact'
 <template>
   <section class="px-4 py-16 sm:px-6 lg:px-8" aria-labelledby="mpesa-heading">
     <div class="mx-auto max-w-3xl rounded-3xl border border-tzel-bronze/20 bg-tzel-espresso/40 p-8 sm:p-10">
-      <p class="text-xs font-medium tracking-[0.4em] text-tzel-bronze uppercase">In-restaurant payments</p>
-      <h2 id="mpesa-heading" class="mt-3 font-serif text-2xl text-tzel-cream sm:text-3xl">Pay with M-Pesa at TZEL CAFÉ</h2>
+      <div class="flex flex-col items-center gap-4 sm:flex-row sm:justify-between">
+        <div>
+          <p class="text-xs font-medium tracking-[0.4em] text-tzel-bronze uppercase">In-restaurant payments</p>
+          <h2 id="mpesa-heading" class="mt-3 font-serif text-2xl text-tzel-cream sm:text-3xl">Pay with M-Pesa at TZEL CAFÉ</h2>
+        </div>
+        <img
+          src="/mpesa-safaricom.svg"
+          alt="M-Pesa by Safaricom"
+          class="h-12 w-auto shrink-0 rounded-lg sm:h-14"
+          width="200"
+          height="56"
+          loading="lazy"
+        />
+      </div>
       <p class="mt-3 text-sm text-tzel-sand/80">
         Dining in or picking up at Siwaka Plaza? Use these official TZEL CAFÉ M-Pesa options. Online orders on this website are paid securely via card (Paystack).
       </p>

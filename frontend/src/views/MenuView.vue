@@ -1,10 +1,12 @@
 <script setup lang="ts">
-import { computed, onMounted, ref } from 'vue'
+import { computed, onMounted, ref, watch } from 'vue'
+import { useRoute } from 'vue-router'
 import CategoryFilter from '@/components/menu/CategoryFilter.vue'
 import MenuItemCard from '@/components/menu/MenuItemCard.vue'
 import { useMenuStore } from '@/stores/menu'
 
 const menu = useMenuStore()
+const route = useRoute()
 
 const activeCategory = ref<string | 'all'>('all')
 
@@ -13,11 +15,21 @@ const filteredItems = computed(() => {
   return menu.items.filter((item) => item.category === activeCategory.value)
 })
 
+function syncCategoryFromRoute() {
+  const slug = route.query.category
+  if (typeof slug === 'string' && slug) {
+    activeCategory.value = slug
+  }
+}
+
 onMounted(async () => {
   if (menu.items.length === 0) {
     await menu.refresh()
   }
+  syncCategoryFromRoute()
 })
+
+watch(() => route.query.category, syncCategoryFromRoute)
 </script>
 
 <template>

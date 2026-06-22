@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import HeroSection from '@/components/home/HeroSection.vue'
 import FeaturedSection from '@/components/home/FeaturedSection.vue'
+import MenuCategoriesSection from '@/components/home/MenuCategoriesSection.vue'
 import AboutSection from '@/components/home/AboutSection.vue'
 import PromotionsBanner from '@/components/home/PromotionsBanner.vue'
 import MpesaPaymentSection from '@/components/home/MpesaPaymentSection.vue'
@@ -11,6 +12,7 @@ import PrimaryButton from '@/components/ui/PrimaryButton.vue'
   <main>
     <HeroSection />
     <FeaturedSection />
+    <MenuCategoriesSection />
     <AboutSection />
     <PromotionsBanner />
 
